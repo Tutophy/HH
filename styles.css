@@ -1,0 +1,59 @@
+/* Basic Reset & Utilities */
+:root{
+  --bg:#0b0b0f;
+  --card:#0f1720;
+  --accent:#00d1ff;
+  --muted:#9aa4ad;
+  --container:1100px;
+  --radius:12px;
+  --gap:1rem;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Naskh Arabic";
+  background:linear-gradient(180deg,var(--bg),#071018);
+  color:#e6eef6;
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand img{display:block}
+nav .nav-list{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+nav .nav-list a{color:var(--muted);text-decoration:none}
+.skip-link{position:absolute;left:0;top:-40px;background:#fff;color:#000;padding:.5rem;z-index:100;transition:top .2s}
+.skip-link:focus{top:10px}
+
+.hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:3rem 0}
+.hero-content h1{font-size:2.2rem;margin:0 0 .5rem}
+.hero-content p{color:var(--muted);margin:0 0 1rem}
+.btn{display:inline-block;background:var(--accent);color:#001;text-decoration:none;padding:.8rem 1.2rem;border-radius:10px;font-weight:600}
+.hero-media img{width:100%;height:auto;border-radius:var(--radius)}
+
+/* Carousel */
+.carousel{background:transparent;padding:1rem 0}
+.carousel-track{display:flex;gap:1rem;overflow:hidden}
+.card{min-width:320px;background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.6)}
+.card h3{margin:0 0 .3rem}
+.carousel-controls{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.6rem}
+.carousel-controls button{background:transparent;border:1px solid var(--muted);color:var(--muted);padding:.4rem .8rem;border-radius:6px;cursor:pointer}
+
+/* Forms */
+form{display:grid;gap:.6rem;max-width:720px}
+input,select,textarea{padding:.6rem;border-radius:8px;border:1px solid #16303a;background:transparent;color:inherit}
+.form-actions{display:flex;gap:.6rem;margin-top:.4rem}
+
+/* Footer */
+.site-footer{padding:2rem 0;color:var(--muted);text-align:center}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;grid-auto-flow:row}
+  .carousel-track{overflow:auto;padding-bottom:8px}
+}
+
+/* Logical properties for RTL/LTR */
+[dir="ltr"] .skip-link{left:auto;right:0}

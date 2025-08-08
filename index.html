@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IL Motors — مستقبل التنقل</title>
+  <meta name="description" content="IL Motors — مشروع سيارات كهربائية مبتكرة: IL-City, IL-Family, IL-Falcon 500. سريع، ذكي، ومستدام.">
+  <meta property="og:title" content="IL Motors — مستقبل التنقل">
+  <meta property="og:description" content="اكتشف موديلاتنا الكهربائية: IL-City, IL-Family, IL-Falcon 500.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "IL Motors",
+    "url": "https://example.com",
+    "logo": "https://example.com/assets/logo.png",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">تخطى إلى المحتوى</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="assets/logo-placeholder.png" alt="IL Motors logo" width="120" height="40">
+      </div>
+      <nav role="navigation" aria-label="Primary">
+        <button id="lang-switch" aria-label="تغيير اللغة">EN</button>
+        <ul class="nav-list">
+          <li><a href="#models" data-i18n="nav.models">الموديلات</a></li>
+          <li><a href="#tech" data-i18n="nav.tech">التقنيات</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">تواصل</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section class="hero" aria-label="Hero section">
+      <div class="hero-content container">
+        <h1 data-i18n="hero.h1">أعد تخيل التنقل</h1>
+        <p data-i18n="hero.p">المستقبل كهربائي، ذكي ومستدام — تصفح موديلاتنا واختبر التكنولوجيا.</p>
+        <a class="btn" href="#models" data-i18n="btn.explore">استكشف الموديلات</a>
+      </div>
+      <picture class="hero-media" aria-hidden="true">
+        <source media="(max-width:600px)" srcset="assets/hero-small.jpg">
+        <img src="assets/hero.jpg" alt="" loading="lazy">
+      </picture>
+    </section>
+
+    <section id="models" class="models" aria-labelledby="models-title">
+      <div class="container">
+        <h2 id="models-title" data-i18n="section.models">الموديلات</h2>
+
+        <div class="carousel" id="model-carousel" aria-roledescription="carousel" aria-label="Car models">
+          <div class="carousel-track" id="carousel-track">
+            <article class="card" data-model="city" tabindex="0" aria-roledescription="slide" aria-label="IL-City">
+              <h3 data-i18n="model.city.title">IL-City</h3>
+              <p data-i18n="model.city.desc">الرفيق الحضري المثالي — مدمجة، فعالة، ومريحة.</p>
+              <ul>
+                <li data-i18n="model.city.spec.range">مدى: 250 كم (تقديري)</li>
+                <li data-i18n="model.city.spec.charge">شحن سريع: 0-80% خلال 35 دقيقة</li>
+              </ul>
+              <model-viewer src="" alt="3D model IL-City" camera-controls ar ar-modes="webxr scene-viewer quick-look" style="width:100%;height:220px;background:#111;"></model-viewer>
+            </article>
+
+            <article class="card" data-model="family" tabindex="0" aria-roledescription="slide" aria-label="IL-Family">
+              <h3 data-i18n="model.family.title">IL-Family</h3>
+              <p data-i18n="model.family.desc">راحة ومساحة للعائلة — تصميم ذكي وميزات أمان متقدمة.</p>
+              <ul>
+                <li data-i18n="model.family.spec.seats">مقاعد: 5</li>
+                <li data-i18n="model.family.spec.storage">سعة تحميل كبيرة</li>
+              </ul>
+              <model-viewer src="" alt="3D model IL-Family" camera-controls ar style="width:100%;height:220px;background:#111;"></model-viewer>
+            </article>
+
+            <article class="card" data-model="falcon" tabindex="0" aria-roledescription="slide" aria-label="IL-Falcon 500">
+              <h3 data-i18n="model.falcon.title">IL-Falcon 500</h3>
+              <p data-i18n="model.falcon.desc">أداء فاخر وتقنيات متقدمة للسرعة والتحكم.</p>
+              <ul>
+                <li data-i18n="model.falcon.spec.power">قدرة: 500 حصان (تقديري)</li>
+                <li data-i18n="model.falcon.spec.top">سرعة قصوى: 240 كم/س (تقديري)</li>
+              </ul>
+              <model-viewer src="" alt="3D model IL-Falcon" camera-controls ar style="width:100%;height:220px;background:#111;"></model-viewer>
+            </article>
+          </div>
+
+          <div class="carousel-controls">
+            <button id="prev" aria-label="السابق">‹</button>
+            <div id="carousel-dots" role="tablist" aria-label="نقاط الشريحة"></div>
+            <button id="next" aria-label="التالي">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tech" class="tech" aria-labelledby="tech-title">
+      <div class="container">
+        <h2 id="tech-title" data-i18n="section.tech">التقنيات</h2>
+        <ul class="features">
+          <li><strong data-i18n="tech.connectivity">الاتصال الذكي</strong> — Car-to-cloud، تحديثات OTA، تطبيق مدمج.</li>
+          <li><strong data-i18n="tech.autonomy">القيادة المساعدة</strong> — أنظمة مساعدة متقدمة ADAS وتحذيرات السلامة.</li>
+          <li><strong data-i18n="tech.sustain">استدامة</strong> — مواد صديقة للبيئة وكفاءة طاقة عالية.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" data-i18n="section.contact">تواصل وطلب الحجز</h2>
+        <form id="preorder-form" action="/api/preorder" method="post" novalidate>
+          <label for="name" data-i18n="form.name">الاسم الكامل</label>
+          <input id="name" name="name" type="text" required placeholder="مثال: أحمد بن دعاس">
+
+          <label for="email" data-i18n="form.email">البريد الإلكتروني</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+          <label for="model" data-i18n="form.model">الموديل</label>
+          <select id="model" name="model" required>
+            <option value="il-city" data-i18n="model.city.title">IL-City</option>
+            <option value="il-family" data-i18n="model.family.title">IL-Family</option>
+            <option value="il-falcon" data-i18n="model.falcon.title">IL-Falcon 500</option>
+          </select>
+
+          <label for="message" data-i18n="form.message">ملاحظة (اختياري)</label>
+          <textarea id="message" name="message" rows="4" placeholder=""></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn" data-i18n="form.submit">إرسال الطلب</button>
+            <button type="reset" class="btn-secondary" data-i18n="form.reset">مسح</button>
+          </div>
+        </form>
+
+        <div id="form-status" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="year"></span> IL Motors. <span data-i18n="footer.rights">جميع الحقوق محفوظة</span>.</p>
+    </div>
+  </footer>
+
+  <!-- model-viewer polyfill CDN placeholder (user can replace or host locally) -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+</html>
